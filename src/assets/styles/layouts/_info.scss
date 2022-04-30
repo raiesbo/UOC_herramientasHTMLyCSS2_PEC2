@@ -1,5 +1,5 @@
-main.info-page {
-
+.info-page main {
+  margin-bottom: 60px;
 
   .body-header {
     display: flex;
@@ -9,13 +9,16 @@ main.info-page {
     width: 100%;
     height: 650px;
     margin-bottom: 60px;
-    font-weight: bold;
-    color: white;
     background-image: url("../images/infoHeader.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 
-    * {
+    > h1 {
+      font-weight: 800;
+      color: white;
+    }
+
+    > p {
       color: white;
     }
   }
@@ -24,8 +27,18 @@ main.info-page {
 .info-body {
   max-width: $maxWidth;
   margin: auto;
+
+  & > * {
+    max-width: calc($maxWidth - 350px);
+    margin: auto;
+  }
 }
 
-img {
-  max-width: 100%;
+.article-img {
+  width: 100%;
+  max-width: calc($maxWidth + 100px);
+  max-height: 600px;
+  margin: 30px auto 30px;
+
+  
 }

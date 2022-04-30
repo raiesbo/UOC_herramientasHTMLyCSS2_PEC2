@@ -17,6 +17,7 @@
   color: $text-main-color;
   text-decoration: none;
 }
+
 .main-footer {
   max-width: calc(20px + $maxWidth);
   padding-right: 10px;
@@ -33,14 +34,30 @@
 }
 
 .footer-links {
-  width: 60%;
+  width: 55%;
 
   &__wrapper {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 100%;
     padding: 0;
     margin: 0;
     list-style: none;
   }
+
+  &__item a {
+    font-weight: bold;
+    color: $text-main-color;
+    text-decoration: none;
+
+    &:hover {
+      border-bottom: 3px solid $text-main-color;
+    }
+  }
+}
+
+.footer-media {
+  display: flex;
+  justify-content: space-between;
+  width: 70px;
 }

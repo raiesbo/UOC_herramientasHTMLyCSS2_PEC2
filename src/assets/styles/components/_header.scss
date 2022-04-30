@@ -39,3 +39,22 @@
     }
   }
 }
+
+body.bands-page {
+  .nav__item--bands a {
+    border-bottom: 3px solid $text-main-color;
+  }
+}
+
+body.info-page {
+  .nav__item--info a {
+    border-bottom: 3px solid $text-main-color;
+  }
+}
+
+
+body.contact-page {
+  .nav__item--contact a {
+    border-bottom: 3px solid $text-main-color;
+  }
+}
