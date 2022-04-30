@@ -1,3 +1,31 @@
-.bands {
-  color: red;
+main.info-page {
+
+
+  .body-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 650px;
+    margin-bottom: 60px;
+    font-weight: bold;
+    color: white;
+    background-image: url("../images/infoHeader.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    * {
+      color: white;
+    }
+  }
+}
+
+.info-body {
+  max-width: $maxWidth;
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
 }
