@@ -40,6 +40,27 @@
   }
 }
 
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border: 3px solid $text-main-color;
+  border-radius: 50%;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: $text-main-color;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 body.bands-page {
   .nav__item--bands a {
     border-bottom: 3px solid $text-main-color;
@@ -56,5 +77,29 @@ body.info-page {
 body.contact-page {
   .nav__item--contact a {
     border-bottom: 3px solid $text-main-color;
+  }
+}
+
+
+body.home-page {
+  header {
+    .icon-circle {
+      border: 3px solid white;
+    }
+  }
+
+  .main-header {
+    position:absolute;
+    top: 0;
+    color: white;
+    border-bottom: 0;
+
+    * {
+      color: white;
+    }
+
+    .nav__item a:hover {
+      border-bottom: 3px solid white;
+    }
   }
 }

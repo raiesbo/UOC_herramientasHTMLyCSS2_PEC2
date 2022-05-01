@@ -13,3 +13,76 @@
     text-transform: uppercase;
   }
 }
+
+.home-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('../images/homeHeader.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.time-to-concert {
+  display: grid;
+  grid-template-areas:
+    "d-time d-text"
+    "h-time h-text"
+    "m-time m-text"
+    "s-time s-text";
+  column-gap: 10px;
+  justify-content: flex-end;
+  width: max-content;
+  margin: auto;
+  font-size: 55px;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+
+  * {
+    color: white;
+  }
+}
+
+.days {
+  &__time {
+    grid-area: d-time;
+    justify-self: flex-end;
+  }
+  &__text {
+    grid-area: d-text;
+  }
+}
+
+.hours {
+  &__time {
+    grid-area: h-time;
+    justify-self: flex-end;
+  }
+  &__text {
+    grid-area: h-text;
+  }
+}
+
+.min {
+  &__time {
+    grid-area: m-time;
+    justify-self: flex-end;
+  }
+  &__text {
+    grid-area: m-text;
+  }
+}
+
+.sec {
+  &__time {
+    grid-area: s-time;
+    justify-self: flex-end;
+  }
+  &__text {
+    grid-area: s-text;
+  }
+}
