@@ -6,7 +6,12 @@
   color: $text-main-color;
 }
 
-.home-page main {
+.home-page {
+  main {
+    margin-top: 60px;
+    margin-bottom: 120px;
+  }
+
   h1 {
     font-weight: 800;
     text-align: center;
@@ -85,4 +90,50 @@
   &__text {
     grid-area: s-text;
   }
+}
+
+
+.show {
+  display: grid;
+  grid-template-areas:
+    "day date"
+    "bands bands";
+  grid-template-columns: min-content 1fr;
+  column-gap: 30px;
+  align-items: center;
+  justify-content: start;
+  max-width: calc(20px + $maxWidth);
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: auto;
+  font-weight: 700;
+  line-height: 1;
+  text-align: left;
+  text-transform: uppercase;
+  
+  &:nth-of-type(2) {
+    grid-template-areas: "date day" "bands bands";
+    grid-template-columns: 1fr min-content;
+    justify-content: end;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: right;
+    
+  }
+}
+
+.show__day {
+  grid-area: day;
+  font-size: 50px;
+}
+
+.show__date {
+  grid-area: date;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.show__bands {
+  grid-area: bands;
+  font-size: 30px;
 }
