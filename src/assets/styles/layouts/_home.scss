@@ -8,14 +8,55 @@
 
 .home-page {
   main {
-    margin-top: 60px;
-    margin-bottom: 120px;
+    margin-top: space(8);
+    margin-bottom: space(9);
+
+    @include match-tablet {
+      margin-bottom: space(8);
+    }
   }
 
   h1 {
+    width: max-content;
+    padding: space(1) space(4);
+    font-size: 45px;
     font-weight: 800;
+    background-color: white;
+
+    @include match-tablet {
+      width: unset;
+      font-size: 25px;
+      text-align: center;
+    }
+  }
+}
+
+.home-header__text {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  font-family: $font-family-serif;
+  font-style: italic;
+  text-transform: uppercase;
+
+  @include match-tablet {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: max-content;
     text-align: center;
-    text-transform: uppercase;
+  }
+}
+
+.home-subline {
+  width: max-content;
+  padding: space(1) space(4);
+  font-size: 20px;
+  font-weight: 800;
+  background-color: white;
+
+  @include match-tablet {
+    font-size: 15px;
   }
 }
 
@@ -38,17 +79,24 @@
     "h-time h-text"
     "m-time m-text"
     "s-time s-text";
-  column-gap: 10px;
+  column-gap: space(2);
   justify-content: flex-end;
   width: 290px;
   margin: auto;
   font-size: 55px;
   font-weight: 800;
   line-height: 1;
+  text-shadow: 1px 1px 10px rgba(black, 0.4);
   text-transform: uppercase;
 
   * {
     color: white;
+  }
+
+  @include match-tablet {
+    width: 185px;
+    font-size: 35px;
+    font-weight: 700;
   }
 }
 
@@ -102,9 +150,9 @@
   column-gap: 30px;
   align-items: center;
   justify-content: start;
-  max-width: calc(20px + $maxWidth);
-  padding-right: 10px;
-  padding-left: 10px;
+  max-width: calc(20px + $max-width);
+  padding-right: 50px;
+  padding-left: space(2);
   margin: auto;
   font-weight: 700;
   line-height: 1;
@@ -112,28 +160,69 @@
   text-transform: uppercase;
   
   &:nth-of-type(2) {
-    grid-template-areas: "date day" "bands bands";
+    grid-template-areas:
+      "date day"
+      "bands bands";
     grid-template-columns: 1fr min-content;
-    justify-content: end;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    justify-content: flex-end;
+    padding-right: space(2);
+    padding-left: 50px;
+    margin-top: space(8);
+    margin-bottom: space(8);
     text-align: right;
-    
+  }
+
+  @include match-tablet {
+    grid-template-areas:
+      "day"
+      "date"
+      "bands";
+    grid-template-columns: 1fr;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+
+    &:nth-of-type(2) {
+      grid-template-areas:
+        "day"
+        "date"
+        "bands";
+      grid-template-columns: 1fr;
+      padding-right: 10px;
+      padding-left: 10px;
+      margin-top: space(6);
+      margin-bottom: space(6);
+      text-align: center;
+    }
   }
 }
 
 .show__day {
   grid-area: day;
-  font-size: 50px;
+  font-size: 45px;
+
+  @include match-tablet {
+    font-size: 30px;
+  }
 }
 
 .show__date {
   grid-area: date;
   font-size: 30px;
   font-weight: 600;
+
+  @include match-tablet {
+    font-size: 25px;
+  }
 }
 
 .show__bands {
   grid-area: bands;
   font-size: 30px;
+  color: rgb(73, 73, 73);
+
+  @include match-tablet {
+    font-size: 20px;
+    line-height: 1.4;
+  }
 }

@@ -1,5 +1,5 @@
 .main-footer {
-  max-width: calc(20px + $maxWidth);
+  max-width: calc(20px + $max-width);
   padding-right: 10px;
   padding-left: 10px;
   margin: auto;
@@ -8,8 +8,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100px;
+    min-height: 100px;
+    padding: 15px 0;
     border-top: 3px solid $text-main-color;
+
+    @include match-tablet {
+      flex-direction: column;
+      gap: 15px;
+    }
   }
 }
 
@@ -23,6 +29,12 @@
     padding: 0;
     margin: 0;
     list-style: none;
+
+    @include match-tablet {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
   }
 
   &__item a {

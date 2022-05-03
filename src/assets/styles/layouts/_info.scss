@@ -29,18 +29,18 @@
 }
 
 .info-body {
-  max-width: $maxWidth;
+  max-width: $max-width;
   margin: auto;
 
   & > * {
-    max-width: calc($maxWidth - 350px);
+    max-width: calc($max-width - 350px);
     margin: auto;
   }
 }
 
 .article-img {
   width: 100%;
-  max-width: calc($maxWidth + 100px);
+  max-width: calc($max-width + 100px);
   max-height: 600px;
   margin: 30px auto 30px; 
 }
