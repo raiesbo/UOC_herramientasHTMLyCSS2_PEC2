@@ -18,7 +18,7 @@ const minutesTag = document.querySelector('.min__time');
 const secondsTag = document.querySelector('.sec__time');
 
 const timeHandler = () => {
-  let lastDay = new Date('06.05.22');
+  let lastDay = new Date('2022-07-08');
   let now = new Date();
 
   const diffTime = lastDay - now
