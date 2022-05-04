@@ -60,3 +60,11 @@
   line-height: 1.1;
   border-right: 1px solid black;
 }
+
+.carousel {
+
+  img {
+    max-height: 600px;
+    object-fit: cover;
+  }
+}
