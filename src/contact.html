@@ -19,41 +19,79 @@
             <h1>Formulario de contacto</h1>
             <form>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label"
-                        >Email address</label
+                    <label for="name" class="form-label"
+                        >Nombre completo:</label
+                    >
+                    <input type="text" class="form-control" id="name" />
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label"
+                        >Correcto electrónico:</label
                     >
                     <input
                         type="email"
                         class="form-control"
-                        id="exampleInputEmail1"
-                        aria-describedby="emailHelp"
+                        id="email"
+                        placeholder="name@example.com"
                     />
-                    <div id="emailHelp" class="form-text">
-                        We'll never share your email with anyone else.
-                    </div>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label"
-                        >Password</label
-                    >
-                    <input
-                        type="password"
+                    <label for="topic" class="form-label">Asunto:</label>
+                    <textarea
                         class="form-control"
-                        id="exampleInputPassword1"
-                    />
+                        id="topic"
+                        rows="3"
+                    ></textarea>
                 </div>
-                <div class="mb-3 form-check">
-                    <input
-                        type="checkbox"
-                        class="form-check-input"
-                        id="exampleCheck1"
-                    />
-                    <label class="form-check-label" for="exampleCheck1"
-                        >Check me out</label
-                    >
+                <div class="button-wrapper">
+                    <button type="submit" class="btn btn-primary">
+                        Enviar
+                    </button>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+            <div>
+                <header>
+                    <h2>Galeria del evento</h2>
+                </header>
+                <div class="galery">
+                    <div class="galery__pic">
+                        <img
+                            src="./assets//images/gallery1.jpg"
+                            alt="galery images"
+                        />
+                    </div>
+                    <div class="galery__pic">
+                        <img
+                            src="./assets//images/gallery2.jpg"
+                            alt="galery images"
+                        />
+                    </div>
+                    <div class="galery__pic">
+                        <img
+                            src="./assets//images/gallery3.jpg"
+                            alt="galery images"
+                        />
+                    </div>
+                    <div class="galery__pic">
+                        <img
+                            src="./assets//images/gallery4.jpg"
+                            alt="galery images"
+                        />
+                    </div>
+                    <div class="galery__pic">
+                        <img
+                            src="./assets//images/gallery5.jpg"
+                            alt="galery images"
+                        />
+                    </div>
+                    <div class="galery__pic">
+                        <img
+                            src="./assets//images/gallery6.jpg"
+                            alt="galery images"
+                        />
+                    </div>
+                </div>
+            </div>
         </main>
         <include src="./views/footer.html"></include>
         <script type="module" src="./assets/scripts/main.js"></script>

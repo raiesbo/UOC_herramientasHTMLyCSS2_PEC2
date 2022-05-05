@@ -1,6 +1,18 @@
+/*------------------------------------*\
+  # GENERAL STYLES
+\*------------------------------------*/
+
 .info-page main {
   margin-bottom: space(9);
+
+  @include match-tablet {
+    margin-bottom: space(7);
+  }
 }
+
+/*------------------------------------*\
+  # PAGE HEADER
+\*------------------------------------*/
 
 .body-header {
   display: flex;
@@ -17,6 +29,11 @@
   background-position: bottom;
   background-size: cover;
 
+  @include match-tablet {
+    height: 300px;
+    margin-bottom: space(6);
+  }
+
   > h1 {
     font-weight: 800;
     color: white;
@@ -24,9 +41,15 @@
   }
 }
 
+/*------------------------------------*\
+  # BODY
+\*------------------------------------*/
+
 .info-body {
   max-width: $max-width;
+  padding: 0 space(2);
   margin: auto;
+  
 
   & > * {
     max-width: calc($max-width - 350px);
@@ -48,7 +71,7 @@
   max-width: 45%;
   border-right: 1px solid black;
 
-  @include match-tablet {
+  @include match-mobile {
     display: none;
   }
 }
@@ -57,11 +80,15 @@
   width: 100%;
   max-width: calc($max-width + 100px);
   max-height: 600px;
-  margin: 30px auto 30px; 
+  margin: space(6) auto; 
 
   img {
     max-height: 600px;
     object-fit: cover;
+  }
+
+  @include match-tablet {
+    margin-bottom: space(7);
   }
 }
 
@@ -69,6 +96,7 @@
   position: absolute;
   left: 50%;
   font-size: 12px;
+  text-align: center;
   transform: translateX(-50%);
 }
 

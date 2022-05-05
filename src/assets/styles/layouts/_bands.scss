@@ -1,3 +1,7 @@
+/*------------------------------------*\
+  # GENERAL STYLES
+\*------------------------------------*/
+
 .bands-page main {
   margin-bottom: space(9);
 
@@ -9,6 +13,10 @@
     text-transform: uppercase;
   }
 }
+
+/*------------------------------------*\
+  # BODY
+\*------------------------------------*/
 
 .bands-wrapper {
   display: grid;
@@ -48,6 +56,10 @@
   }
 }
 
+/*------------------------------------*\
+  # COMPONENT SPECIFIC
+\*------------------------------------*/
+
 .button-wrapper {
   display: flex;
   align-items: center;
@@ -56,7 +68,6 @@
 }
 
 .btn-primary {
-  padding: 8px 15px;
   font-weight: 600;
   text-transform: uppercase;
   background-color: $text-main-color;
