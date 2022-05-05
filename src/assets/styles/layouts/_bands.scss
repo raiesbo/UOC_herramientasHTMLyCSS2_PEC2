@@ -54,3 +54,15 @@
   justify-content: center;
   margin-top: space(6);
 }
+
+.btn-primary {
+  padding: 8px 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: $text-main-color;
+  border-color: $text-main-color;
+
+  &:hover {
+    background-color: rgba($text-main-color, .5);
+  }
+}
