@@ -53,27 +53,6 @@
   }
 }
 
-.icon-circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 35px;
-  height: 35px;
-  border: 3px solid $text-main-color;
-  border-radius: 50%;
-}
-
-.logo {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: $text-main-color;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
 body.bands-page {
   .nav__item--bands a {
     border-bottom: 3px solid $text-main-color;
